@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Python Modules Explorer is under development. More Python modules and detailed documentation are coming soon.">
+  <title>Python Modules Explorer — Under Development</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080d1a;
+      --panel: rgba(19, 28, 51, .78);
+      --line: rgba(170, 190, 230, .17);
+      --text: #f3f6ff;
+      --muted: #aab5d0;
+      --accent: #7c9cff;
+      --accent2: #68e1c2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 15% 10%, rgba(68, 104, 220, .22), transparent 42%),
+        radial-gradient(ellipse at 88% 80%, rgba(38, 185, 157, .12), transparent 38%),
+        var(--bg);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .page { width: min(900px, 100%); }
+    .topline {
+      display: flex; align-items: center; gap: 10px;
+      color: var(--muted); font-size: .88rem; letter-spacing: .04em;
+      margin-bottom: 24px;
+    }
+    .logo {
+      width: 42px; height: 42px; display: grid; place-items: center;
+      border: 1px solid var(--line); border-radius: 13px;
+      background: rgba(124, 156, 255, .12);
+      color: var(--accent2); font-weight: 800; font-size: 1.2rem;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(104, 225, 194, .28);
+      border-radius: 999px; padding: 8px 12px;
+      color: #a7f3df; background: rgba(104, 225, 194, .08);
+      font-size: .83rem; font-weight: 650;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent2); }
+    h1 {
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      line-height: 1.04; letter-spacing: -.055em;
+      margin: 20px 0 18px; max-width: 800px;
+    }
+    .gradient {
+      background: linear-gradient(95deg, #a8bcff, #74e5ce);
+      color: transparent; background-clip: text; -webkit-background-clip: text;
+    }
+    .lead {
+      color: var(--muted); font-size: clamp(1rem, 2.3vw, 1.2rem);
+      line-height: 1.8; max-width: 670px; margin: 0;
+    }
+    .cards {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 14px; margin: 34px 0;
+    }
+    .card {
+      border: 1px solid var(--line); background: var(--panel);
+      border-radius: 18px; padding: 20px; min-height: 150px;
+      backdrop-filter: blur(12px);
+    }
+    .icon { font-size: 1.45rem; margin-bottom: 15px; }
+    .card h2 { font-size: 1rem; margin: 0 0 8px; }
+    .card p { color: var(--muted); font-size: .92rem; line-height: 1.65; margin: 0; }
+    .progress-wrap { margin: 28px 0 34px; }
+    .progress-label {
+      display: flex; justify-content: space-between; gap: 12px;
+      color: var(--muted); font-size: .9rem; margin-bottom: 10px;
+    }
+    .progress { height: 7px; background: rgba(255,255,255,.09); border-radius: 20px; overflow: hidden; }
+    .progress span {
+      display: block; width: 36%; height: 100%; border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+    .note {
+      border-left: 3px solid var(--accent); padding: 14px 16px;
+      background: rgba(124, 156, 255, .07); color: #d7e0ff;
+      border-radius: 0 12px 12px 0; line-height: 1.7;
+    }
+    footer {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 14px; border-top: 1px solid var(--line); padding-top: 22px;
+      color: var(--muted); font-size: .9rem; flex-wrap: wrap;
+    }
+    footer strong { color: var(--text); font-weight: 650; }
+    .footer-tag { color: var(--accent2); }
+    @media (max-width: 680px) {
+      body { padding: 18px; }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      h1 { letter-spacing: -.04em; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .page { animation: enter .65s ease-out both; }
+      @keyframes enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topline">
+      <div class="logo" aria-hidden="true">Py</div>
+      <span>PYTHON MODULES EXPLORER</span>
+    </div>
+
+    <div class="badge"><span class="dot" aria-hidden="true"></span> Project under development</div>
+
+    <h1>Learn Python, <span class="gradient">one module at a time.</span></h1>
+    <p class="lead">
+      We’re building a practical guide to Python’s modules, functions, and tools.
+      More modules and detailed documentation are coming soon—with clear explanations,
+      code examples, and expected outputs to help you learn with confidence.
+    </p>
+
+    <section class="cards" aria-label="What's coming">
+      <article class="card">
+        <div class="icon" aria-hidden="true">📚</div>
+        <h2>More modules</h2>
+        <p>Explore more of Python’s standard library, organized into easy-to-navigate categories.</p>
+      </article>
+      <article class="card">
+        <div class="icon" aria-hidden="true">⌘</div>
+        <h2>Detailed documentation</h2>
+        <p>Understand syntax, parameters, return values, common errors, and practical use cases.</p>
+      </article>
+      <article class="card">
+        <div class="icon" aria-hidden="true">{"</>"}</div>
+        <h2>Practical examples</h2>
+        <p>Learn through readable code snippets, step-by-step explanations, and expected outputs.</p>
+      </article>
+    </section>
+
+    <div class="progress-wrap" aria-label="Development status">
+      <div class="progress-label">
+        <span>Development in progress</span>
+        <span>More updates coming</span>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Development progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="36">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Coming soon:</strong> This project is still being developed. New modules,
+      function references, and learning resources will be added as the documentation grows.
+    </div>
+
+    <footer>
+      <span>Built for curious Python learners.</span>
+      <span>Published by <strong>Girindra Kutum</strong> <span class="footer-tag">· Python Modules Explorer</span></span>
+    </footer>
+  </main>
+</body>
+</html>
