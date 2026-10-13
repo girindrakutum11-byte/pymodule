@@ -1,0 +1,9 @@
+{
+  "name": "Python Modules Explorer",
+  "short_name": "Python Modules",
+  "description": "Learn Python modules, functions, imports, syntax, and programming concepts through beginner-friendly explanations and examples.",
+  "start_url": "/pymodule/",
+  "display": "standalone",
+  "background_color": "#101827",
+  "theme_color": "#101827"
+}
